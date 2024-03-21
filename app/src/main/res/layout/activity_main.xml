@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_file_name"
+        android:inputType="text"
+        android:lines="1"
+        android:hint="file name"
+        android:textSize="16sp"
+        android:maxLines="1"
+        ></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_file_content"
+        android:hint="content"
+        android:textSize="16sp"
+        android:maxLines="12"
+        android:lines="4"
+        android:inputType="textMultiLine"
+        ></EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="External storage"
+            android:id="@+id/cb_external_storage"
+            android:checked="false"></CheckBox>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="sd card"
+            android:id="@+id/cb_sd_card"
+            android:checked="false"></CheckBox>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="read file"
+            android:id="@+id/btn_read_file"
+            style="@style/Widget.AppCompat.ButtonBar"
+            ></androidx.appcompat.widget.AppCompatButton>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="write file"
+            android:id="@+id/btn_write_file"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            ></androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_tv"></TextView>
+</LinearLayout>
